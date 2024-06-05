@@ -23,5 +23,5 @@ Si quieres clonar y explorar este proyecto, sigue estos pasos:
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/steaac9/portfolio/
+   git clone https://github.com/steaac9/Portafolio/
 
