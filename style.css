@@ -36,6 +36,10 @@ p{
     overflow-wrap: break-word;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .mi-logo img{
     height: 24px;
 }
@@ -224,12 +228,559 @@ p{
 }
 
 /* Experiencia */
-.experiencia{
+.experiencia {
     display: flex;
-    padding: 32px;
     flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    align-self: stretch;
+    padding-top: 3rem;
+    background-color: #F5F5F5;
 }
 
+.experience__section__title {
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.experiencie__box{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10rem 3rem;
+    gap: 1rem;
+}
+
+.experiencie__box:nth-child(odd){
+    flex-direction: row-reverse;
+}
+
+.experience__title{
+    font-size: 1.375rem;
+    font-weight:700;
+    line-height: 1.5rem;
+    padding-top: 1rem;
+}
+
+.experience__text{
+    font-size:1rem;
+    font-weight: 500;
+    padding-top: 0.5rem;
+}
+
+.experiencia__botao--repo{
+    margin: 0.5rem;
+    border:1px solid;
+    border-color: #2A7AE4;
+    color: #2A7AE4;
+    font-size: 1rem;
+    width: 116px;
+    height: 51px;
+    cursor: pointer;  
+}
+
+.experience__botao--demo{
+    margin: 0.5rem;
+    border:1px solid;
+    border-color: #2A7AE4;
+    background-color: #2A7AE4;
+    color: #fff;
+    font-size: 1rem;
+    width: 116px;
+    height: 51px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .experiencie__box{
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 5rem 1rem;
+        gap: 2rem;  
+    }
+    .experience__img{
+        width: 60%;
+    }
+}
+
+@media (max-width: 414px){
+    .experience {
+        display: flex;
+        flex-direction: column;
+        background-color: #F5F5F5;
+    }
+    .experiencie__box{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .experiencie__box img{
+        width: 300px;
+    }
+    .experience__img{
+        width: 100%;
+    }
+    .experience__description{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+
+/* Contacto */
+.input-container {
+    position: relative;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+  }
+
+.formcontato{
+    background-color: #EAF2FD;
+    width: 100%;
+    height: 660px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.formcontato__contacto{
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+    gap:1.5rem;
+}
+
+.formcontato__text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.formcontato__title{
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.375rem; 
+    padding-bottom: 0.5rem;
+ }
+
+.formcontato__subtext{
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.formcontato__form{
+    display: flex;
+    flex-direction: column;
+}
+.input-label{
+    color: #A2A2A2;
+}
+
+.formcontato__input{
+    box-sizing: border-box;
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border-radius: 4px;
+    border: none;
+    border-bottom: solid 2px #2A7AE4;
+    width: 656px;
+    height: 58px;
+    position: relative;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.formcontato__input::placeholder, .formcontato__textarea::placeholder{
+    visibility: hidden;
+
+}
+
+.formcontato__input:focus, .formcontato__textarea:focus{
+  outline: none;
+}
+
+.input-label, .textarea-label {
+    position: absolute;
+    font-family: 'Raleway';
+    top:1.2rem;
+    left:1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    transition: all 0.25s;
+}
+
+.formcontato__textarea {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border-radius: 4px;
+    border:none;
+    position: relative;
+    padding-top: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    font-size: 1rem;
+    resize: none;
+}
+.textarea-label{
+    color: #A2A2A2;
+}
+.formcontato__botao{
+    width: 165px;
+    height: 51px;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #2A7AE4;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.formcontato__input:not(:placeholder-shown) + .input-label,
+.formcontato__input:focus + .input-label,
+.formcontato__textarea:not(:placeholder-shown) + .textarea-label,
+.formcontato__textarea:focus + .textarea-label {
+  font-size: 0.875rem;
+  top: 0.42rem;
+  transition: all 0.25s;
+}
+
+  .input-container--invalid {
+    margin-bottom: 0.5rem;
+  }
+  
+  .input-container--invalid .formcontato__input {
+    border: 4px solid #ff0000;
+    border-radius: 7px;
+  }
+  
+  .input-container--invalid .input-label {
+    color: #ff0000;
+    font-weight: 700;
+  }
+  
+  .input-message-error {
+    display: none;
+  }
+  
+  .input-container--invalid .input-message-error {
+    color: #ff0000;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: block;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  @media (max-width: 768px){
+    .formcontato--esquerda{
+        display: none;
+    }
+  }
+
+  @media (max-width: 414px){
+    .formcontato__text{
+        width: 80%;
+    }
+    .input-container{
+        width: 100%;
+    }
+    .formcontato__input{
+        width: 95%;
+    }
+    .formcontato__textarea{
+        width: 95%;
+    }
+  }
+
+  /* Media Copiada */
+  @media (max-width: 1440px){ 
+    .seccion1-container{
+        display: flex;
+        justify-content: space-evenly;
+        box-sizing: content-box;
+        height: 450px;
+        padding-left: 100px;
+        background-color: #F5F5F5;
+    }
+    .perfil-container{
+        right: 50px;   
+    }
+    .mi-logo{
+        right: 100px;
+    }
+    .mi-logo p{
+        padding-left: 10px;
+    }
+    .seccion2-container{
+        display: flex;
+        background-color: #EAF2FD;
+        width: 100%;
+        height: 360px;
+    }
+    .seccion-sobremi{
+        padding-left: 180px;
+    }
+}
+
+@media (max-width: 768px){ 
+    .enlaces-container{
+        left: 30px; 
+    }
+    .mi-logo{
+        position: relative;
+        left: 5px;
+    }
+    .mi-logo p{
+        padding-left: 10px;
+    }
+    .seccion1-container{
+        height: 550px;
+        padding-left: 50px;
+        background-color: #F5F5F5;
+    }
+    .seccion-1 h1{
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 42px;
+        color: #464646;
+        padding-top: 60px;
+    }
+    .seccion-1 p{
+        padding-top: 20px;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        color: #464646;
+    }
+    .perfil-container{
+        right: 20px;
+        top: 90px;
+    }
+    .perfil-container img{
+        width: 268px;
+        height: 268px;
+    }
+    .seccion2-container{
+        display: flex;
+        background-color: #EAF2FD;
+        width: 100%;
+        height: 367px;
+    }
+    .seccion-sobremi{
+        padding-left: 50px;
+        padding-top: 40px;
+    }
+    .seccion-sobremi p{
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width: 414px){
+    nav{
+        display: flex;
+        background-color: #F5F5F5;
+        padding: 15px;
+    }
+    .mi-logo{
+        position: absolute;
+        left: 10px;
+        display: grid;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+    .mi-logo p{
+        position: absolute;
+        left: 25px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        color: #464646;
+        padding-left: 5px;
+        padding-top: 3px;
+    
+    }
+
+    .enlaces-container{
+        position: relative;
+        box-sizing: border-box;
+        width: 200px;
+        
+    }
+    .enlaces-container a{
+        text-decoration: none;
+        color: #464646;
+        font-weight: 500;
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+    }
+    .enlaces-container a:nth-child(1){
+        display: none;
+    }
+    .enlaces-container a:nth-child(2){
+        display: none;
+    }
+    .enlaces-container a:nth-child(3){
+        display: none;
+    }
+    .enlaces-container a:nth-child(4){
+        display: none;
+    }
+    .enlaces-container a:nth-child(5){
+        display: none;
+    }
+    .enlaces-container a:nth-child(6){
+        padding-left: 120px;
+        padding-top: 2px;
+    }
+
+    .perfil-container{
+        position: absolute;
+        left: 70px;
+        top: 70px;
+        width: 270px;
+        height: 270px;
+        box-sizing: border-box;
+    }
+    .perfil-container img{
+        box-sizing: border-box;
+        width: 268px;
+        height: 268px;
+        border-radius: 200px;
+    }
+
+    .seccion1-container{
+        height: 780px;
+        padding-left: 30px;
+        padding-right: 20px;
+        background-color: #F5F5F5;
+    }
+    .seccion-1{
+        padding-top: 200px;   
+    }
+    .seccion2-container{
+        display: flex;
+        background-color: #EAF2FD;
+        width: 100%;
+        height: 480px;
+    }
+    .seccion-sobremi{
+        padding-left: 30px;
+        padding-top: 40px;
+    }
+    .seccion-sobremi p{
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 390px){
+    nav{
+        display: flex;
+        background-color: #F5F5F5;
+        padding: 15px;
+    }
+    .mi-logo{
+        position: absolute;
+        left: 10px;
+        display: grid;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+    .mi-logo p{
+        position: absolute;
+        left: 25px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        color: #464646;
+        padding-left: 5px;
+        padding-top: 3px;
+    
+    }
+
+    .enlaces-container{
+        position: relative;
+        box-sizing: border-box;
+        width: 200px;
+        
+    }
+    .enlaces-container a{
+        text-decoration: none;
+        color: #464646;
+        font-weight: 500;
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+    }
+    .enlaces-container a:nth-child(1){
+        display: none;
+    }
+    .enlaces-container a:nth-child(2){
+        display: none;
+    }
+    .enlaces-container a:nth-child(3){
+        display: none;
+    }
+    .enlaces-container a:nth-child(4){
+        display: none;
+    }
+    .enlaces-container a:nth-child(5){
+        display: none;
+    }
+    .enlaces-container a:nth-child(6){
+        padding-left: 120px;
+        padding-top: 2px;
+    }
+
+    .perfil-container{
+        position: absolute;
+        left: 55px;
+        top: 70px;
+        width: 270px;
+        height: 270px;
+        box-sizing: border-box;
+    }
+    .perfil-container img{
+        box-sizing: border-box;
+        width: 268px;
+        height: 268px;
+        border-radius: 200px;
+    }
+
+    .seccion1-container{
+        height: 780px;
+        padding-left: 30px;
+        padding-right: 20px;
+        background-color: #F5F5F5;
+    }
+    .seccion-1{
+        padding-top: 200px;   
+    }
+
+    .seccion-1 h1{
+        font-size: 2em;
+    }
+
+    .seccion2-container{
+        display: flex;
+        background-color: #EAF2FD;
+        width: 100%;
+        height: 480px;
+    }
+    .seccion-sobremi{
+        padding-left: 30px;
+        padding-top: 40px;
+    }
+    .seccion-sobremi p{
+        padding-right: 30px;
+    }
+}
